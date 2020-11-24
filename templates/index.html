@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>Loan Predict</title>
+  </head>
+
+  <body style="background-color: rgb(51, 51, 56);">
+
+<div style="background-color: rgb(144, 10, 156);" class="container main">
+  <div style="background-color: rgb(144, 10, 156);" class="jumbotron" id="holder">
+     <br>
+       <center><b></b></center>
+     <br>
+     <br>
+    <center><h1 class='main_heading'> Network Intrusion Detection System</h1></center>
+	<p>Machine Learning Algorithm to Detect the Intrusion over the Network.</p>
+	<p>This Model of This Web Based Application is processed by a 77.1% Accuracy using Gradient Boost</p>
+	<p><b>Please fill the form below</b></p>
+    <br>
+    <form style="background-color: rgb(144, 10, 156);" class="form-horizontal" action="/predict"method="post">
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <input  class="form-control" type= "text" name="dst_host_srv_rerror_rate" placeholder="Enter your number of distination host" required="required" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <input  class="form-control" type="text" name="num_compromised" placeholder="Enter number of compromised condition" required="required" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <input  class="form-control" type="text" name="diff_srv_rate" placeholder="Enter Your different service rate" required="required" />
+        </div>
+    </div>
+    
+    <div class="form-group">
+      <div class="col-sm-10">
+        <input  class="form-control" type="text" name="hot" placeholder="Enter number of hot indicator" required="required" />
+      </div>
+  </div>
+  
+
+  <div class="form-group">
+    <div class="col-sm-10">
+      <input  class="form-control" type="text" name="srv_serror_rate" placeholder="Enter number of connection that has SYN errors" required="required" />
+    </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="num_file_creations" placeholder="Enter number of file creation operations" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="num_root" placeholder="Enter number of roots accesses" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="dst_host_srv_count" placeholder="Enter number of distination service count" required="required" />
+  </div>
+
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="dst_host_srv_serror_rate" placeholder="Enter number of distination host service that has SYN error rate" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="dst_host_same_src_port_rate" placeholder="Enter number of destination host with same src port rate" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="dst_host_rerror_rate" placeholder="Enter destination host rerror rate" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="dst_host_diff_srv_rate" placeholder="Enter destination host for different service rate" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="dst_host_same_srv_rate" placeholder="Enter  destination host for same service rate" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="count" placeholder="Enter number of connections" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="same_srv_rate" placeholder="Enter same service rate" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="dst_host_count" placeholder="Enter destination host count" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="src_bytes" placeholder="Enter number of data bytes  from the source to destination" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="dst_bytes" placeholder="Enter number of data bytes from destination to source" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="dst_host_srv_diff_host_rate" placeholder="Enter number of destination host service diffent host rate" required="required" />
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-10">
+    <input  class="form-control" type="text" name="flag" placeholder="Enter normal or error status of the connection" required="required" />
+  </div>
+</div>
+
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number" name="logged_in" required="required">
+                <option value="0">did you login?</option>
+                <option value="1">1</option>
+                <option value="0">0</option>
+          </select>
+        </div>
+      </div>
+
+      
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number" name="is_guest_login" required="required">
+                <option value="0">is_guest_login?</option>
+                <option value="1">1</option>
+                <option value="0">0</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number"  name="root_shell" required="required">
+                <option value="0">Number of root_shell accesses? </option>
+                <option value="1">1</option>
+                <option value="0">0</option>
+          </select>
+        </div>
+      </div>
+
+     
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number" name="protocol_type" required="required">
+                <option value="0">Protocol type?</option>
+                <option value="2">UDP</option>
+                <option value="1">TCP</option>
+                <option value="0">IMCP</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-10">
+          <select class="form-control" type="number" name="wrong_fragment" required="required">
+                <option value="0">wrong_fragment?</option>
+                <option value="2">3</option>
+                <option value="1">1 </option>
+                <option value="0">0</option>
+          </select>
+        </div>
+      </div>
+      
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="button btn btn-default">PREDICT</button>
+        </div>
+      </div>
+    </form>
+
+    <br>
+    <br>
+
+        {{ prediction_text }}
+
+  </div>
+  </div>
+
+  </body>
+</html>
